@@ -1,0 +1,331 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#08130f">
+    <meta
+      name="description"
+      content="Política de Privacidade do Notchling para a versão interna distribuída pelo TestFlight."
+    >
+    <title>Política de Privacidade — Notchling</title>
+    <style>
+      :root {
+        color-scheme: dark;
+        --background: #07110d;
+        --surface: #0d1d16;
+        --surface-elevated: #13271d;
+        --text: #f1f7f2;
+        --muted: #a7b9ac;
+        --line: rgba(195, 236, 207, 0.14);
+        --leaf: #8ee8a7;
+        --gold: #f3cb6a;
+        --content: 760px;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        background:
+          radial-gradient(circle at 12% 0%, rgba(62, 145, 88, 0.2), transparent 33rem),
+          radial-gradient(circle at 92% 18%, rgba(243, 203, 106, 0.08), transparent 26rem),
+          var(--background);
+        color: var(--text);
+        font-family: ui-rounded, "SF Pro Rounded", "SF Pro Text", -apple-system, BlinkMacSystemFont, sans-serif;
+        font-size: 17px;
+        line-height: 1.65;
+      }
+
+      a {
+        color: var(--leaf);
+        text-underline-offset: 0.18em;
+      }
+
+      a:hover {
+        color: #bcf5ca;
+      }
+
+      .skip-link {
+        position: absolute;
+        left: 1rem;
+        top: -4rem;
+        z-index: 2;
+        border-radius: 999px;
+        background: var(--text);
+        color: var(--background);
+        padding: 0.65rem 1rem;
+      }
+
+      .skip-link:focus {
+        top: 1rem;
+      }
+
+      header,
+      main,
+      footer {
+        width: min(calc(100% - 2rem), var(--content));
+        margin-inline: auto;
+      }
+
+      header {
+        padding: clamp(4rem, 10vw, 7.5rem) 0 2.5rem;
+      }
+
+      .eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.55rem;
+        margin: 0 0 1rem;
+        color: var(--gold);
+        font-size: 0.78rem;
+        font-weight: 750;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+
+      .eyebrow::before {
+        width: 0.55rem;
+        height: 0.55rem;
+        border-radius: 50%;
+        background: var(--gold);
+        box-shadow: 0 0 1rem rgba(243, 203, 106, 0.55);
+        content: "";
+      }
+
+      h1,
+      h2 {
+        letter-spacing: -0.035em;
+        line-height: 1.12;
+      }
+
+      h1 {
+        max-width: 12ch;
+        margin: 0;
+        font-size: clamp(2.7rem, 9vw, 5.7rem);
+      }
+
+      h2 {
+        margin: 0 0 1rem;
+        font-size: clamp(1.45rem, 4vw, 2rem);
+      }
+
+      p,
+      ul {
+        margin: 0 0 1.15rem;
+      }
+
+      .intro {
+        max-width: 62ch;
+        margin-top: 1.5rem;
+        color: var(--muted);
+        font-size: clamp(1.08rem, 2.5vw, 1.28rem);
+      }
+
+      .updated {
+        display: inline-block;
+        margin-top: 1.25rem;
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        background: rgba(13, 29, 22, 0.7);
+        color: var(--muted);
+        padding: 0.45rem 0.8rem;
+        font-size: 0.82rem;
+      }
+
+      .summary {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1px;
+        overflow: hidden;
+        margin: 1rem 0 3.5rem;
+        border: 1px solid var(--line);
+        border-radius: 1.25rem;
+        background: var(--line);
+      }
+
+      .summary div {
+        min-height: 8rem;
+        background: rgba(13, 29, 22, 0.92);
+        padding: 1.25rem;
+      }
+
+      .summary strong {
+        display: block;
+        margin-bottom: 0.45rem;
+        color: var(--leaf);
+        font-size: 1.05rem;
+      }
+
+      .summary span {
+        color: var(--muted);
+        font-size: 0.9rem;
+        line-height: 1.45;
+      }
+
+      section {
+        scroll-margin-top: 1.5rem;
+        border-top: 1px solid var(--line);
+        padding: 2.5rem 0;
+      }
+
+      li + li {
+        margin-top: 0.45rem;
+      }
+
+      .contact {
+        margin-top: 1rem;
+        border: 1px solid rgba(142, 232, 167, 0.22);
+        border-radius: 1rem;
+        background: linear-gradient(135deg, rgba(24, 54, 38, 0.82), rgba(13, 29, 22, 0.9));
+        padding: 1.2rem;
+      }
+
+      footer {
+        padding: 1rem 0 3rem;
+        color: var(--muted);
+        font-size: 0.84rem;
+      }
+
+      @media (max-width: 650px) {
+        .summary {
+          grid-template-columns: 1fr;
+        }
+
+        .summary div {
+          min-height: 0;
+        }
+      }
+
+      @media print {
+        :root {
+          color-scheme: light;
+        }
+
+        body {
+          background: #fff;
+          color: #142019;
+          font-size: 11pt;
+        }
+
+        .summary div,
+        .contact {
+          background: #fff;
+        }
+
+        a {
+          color: #1d5c31;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
+
+    <header>
+      <p class="eyebrow">Notchling · TestFlight interno</p>
+      <h1>Privacidade em linguagem clara.</h1>
+      <p class="intro">
+        Esta Política explica como o Notchling trata dados durante a versão interna de testes
+        distribuída pelo TestFlight. O responsável pela distribuição é Igor Veloso.
+      </p>
+      <p class="updated">Última atualização: 12 de agosto de 2026</p>
+    </header>
+
+    <main id="conteudo">
+      <aside class="summary" aria-label="Resumo de privacidade">
+        <div>
+          <strong>Sem cadastro nominal</strong>
+          <span>A conta é anônima e não pede nome, e-mail, telefone ou senha.</span>
+        </div>
+        <div>
+          <strong>Sem publicidade</strong>
+          <span>Não vendemos dados e não fazemos tracking entre aplicativos ou sites.</span>
+        </div>
+        <div>
+          <strong>Dados de jogo</strong>
+          <span>Progresso e sinais técnicos mantêm a jornada e as Live Activities.</span>
+        </div>
+      </aside>
+
+      <section aria-labelledby="dados">
+        <h2 id="dados">1. Dados tratados</h2>
+        <p>O Notchling cria uma conta anônima, sem solicitar nome, e-mail, telefone ou senha. Para operar o jogo, podemos tratar:</p>
+        <ul>
+          <li>um identificador aleatório da conta anônima;</li>
+          <li>um identificador aleatório da instalação;</li>
+          <li>progresso e conteúdo de gameplay, como nível, XP, gold, itens, expedições, encontros, escolhas e recompensas;</li>
+          <li>informações técnicas de notificações e Live Activities, como identificador da atividade, token de push, revisão e estado de entrega;</li>
+          <li>eventos operacionais necessários para restaurar a jornada, evitar duplicidade, diagnosticar falhas e verificar a entrega das atualizações;</li>
+          <li>feedback enviado voluntariamente pelo TestFlight ou por e-mail.</li>
+        </ul>
+        <p>Não coletamos nome, e-mail, telefone, localização, contatos, fotos, áudio, dados de saúde, dados de pagamento ou identificador de publicidade dentro do app.</p>
+      </section>
+
+      <section aria-labelledby="finalidades">
+        <h2 id="finalidades">2. Finalidades</h2>
+        <p>Usamos os dados para:</p>
+        <ul>
+          <li>autenticar a conta anônima;</li>
+          <li>executar, salvar e restaurar o progresso;</li>
+          <li>entregar notificações e atualizar Dynamic Island e Tela Bloqueada;</li>
+          <li>aplicar recompensas de forma autoritativa e impedir duplicidades;</li>
+          <li>manter segurança, estabilidade e diagnóstico técnico;</li>
+          <li>responder a solicitações de suporte e privacidade.</li>
+        </ul>
+        <p>O Notchling não vende dados, não exibe publicidade, não realiza tracking entre aplicativos ou sites e não possui compras no app nesta versão.</p>
+      </section>
+
+      <section aria-labelledby="servicos">
+        <h2 id="servicos">3. Serviços utilizados</h2>
+        <ul>
+          <li><strong>Supabase:</strong> autenticação anônima, banco de dados e funções de backend;</li>
+          <li><strong>OneSignal:</strong> notificações e atualizações de Live Activities;</li>
+          <li><strong>Apple:</strong> APNs, ActivityKit, TestFlight, distribuição, métricas e feedback.</li>
+        </ul>
+        <p>Esses provedores podem processar dados em outros países conforme seus próprios termos e medidas de segurança. Compartilhamos somente o necessário para as finalidades descritas nesta Política.</p>
+      </section>
+
+      <section aria-labelledby="retencao">
+        <h2 id="retencao">4. Retenção</h2>
+        <p>Progresso e histórico operacional ficam associados à conta anônima enquanto a versão de teste estiver ativa ou até uma solicitação válida de exclusão. A RC interna ainda não possui exclusão automática no app. Desinstalar o aplicativo não apaga imediatamente o registro hospedado e pode impedir o acesso ao mesmo identificador anônimo.</p>
+        <p>Solicitações de exclusão são processadas manualmente pelo canal de contato. Pode ser necessário fornecer informações técnicas adicionais para localizar com segurança o registro anônimo correto. Dados que precisem ser mantidos para segurança, prevenção de fraude ou cumprimento de obrigação legal serão conservados somente pelo período aplicável.</p>
+      </section>
+
+      <section aria-labelledby="seguranca">
+        <h2 id="seguranca">5. Segurança</h2>
+        <p>Aplicamos controle de acesso por conta anônima, regras de segurança no banco, funções autoritativas no servidor, transporte criptografado e separação de segredos de produção. Nenhum método de transmissão ou armazenamento é totalmente isento de risco.</p>
+      </section>
+
+      <section aria-labelledby="direitos">
+        <h2 id="direitos">6. Seus direitos</h2>
+        <p>Você pode solicitar confirmação de tratamento, acesso, correção, informação sobre compartilhamento, oposição ou exclusão, conforme a legislação aplicável. Responderemos após verificar a solicitação e localizar o registro correspondente.</p>
+      </section>
+
+      <section aria-labelledby="criancas">
+        <h2 id="criancas">7. Crianças e classificação</h2>
+        <p>O Notchling não é direcionado a crianças e não está inscrito como “Made for Kids”. A versão atual contém violência fantasiosa infrequente. Não coletamos conscientemente dados pessoais de crianças.</p>
+      </section>
+
+      <section aria-labelledby="alteracoes">
+        <h2 id="alteracoes">8. Alterações</h2>
+        <p>Esta Política pode ser atualizada quando o produto, os provedores ou as exigências legais mudarem. A data no início do documento indicará a versão vigente.</p>
+      </section>
+
+      <section aria-labelledby="contato">
+        <h2 id="contato">9. Contato</h2>
+        <p class="contact"><strong>Privacidade e feedback</strong><br><a href="mailto:gilberto.sirq@gmail.com">gilberto.sirq@gmail.com</a></p>
+      </section>
+    </main>
+
+    <footer>
+      <p>Notchling · Release Candidate interna 0.1.0 (1)</p>
+    </footer>
+  </body>
+</html>
