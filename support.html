@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#08130f"><meta name="description" content="Ajuda com jornadas, progresso, conta Apple e privacidade no Notchling."><title>Ajuda e suporte — Notchling</title><style>
+      :root {
+        color-scheme: dark;
+        --background: #07110d;
+        --surface: #0d1d16;
+        --surface-elevated: #13271d;
+        --text: #f1f7f2;
+        --muted: #a7b9ac;
+        --line: rgba(195, 236, 207, 0.14);
+        --leaf: #8ee8a7;
+        --gold: #f3cb6a;
+        --content: 760px;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        background:
+          radial-gradient(circle at 12% 0%, rgba(62, 145, 88, 0.2), transparent 33rem),
+          radial-gradient(circle at 92% 18%, rgba(243, 203, 106, 0.08), transparent 26rem),
+          var(--background);
+        color: var(--text);
+        font-family: ui-rounded, "SF Pro Rounded", "SF Pro Text", -apple-system, BlinkMacSystemFont, sans-serif;
+        font-size: 17px;
+        line-height: 1.65;
+      }
+
+      a {
+        color: var(--leaf);
+        text-underline-offset: 0.18em;
+      }
+
+      a:hover {
+        color: #bcf5ca;
+      }
+
+      .skip-link {
+        position: absolute;
+        left: 1rem;
+        top: -4rem;
+        z-index: 2;
+        border-radius: 999px;
+        background: var(--text);
+        color: var(--background);
+        padding: 0.65rem 1rem;
+      }
+
+      .skip-link:focus {
+        top: 1rem;
+      }
+
+      header,
+      main,
+      footer {
+        width: min(calc(100% - 2rem), var(--content));
+        margin-inline: auto;
+      }
+
+      header {
+        padding: clamp(4rem, 10vw, 7.5rem) 0 2.5rem;
+      }
+
+      .eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.55rem;
+        margin: 0 0 1rem;
+        color: var(--gold);
+        font-size: 0.78rem;
+        font-weight: 750;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+
+      .eyebrow::before {
+        width: 0.55rem;
+        height: 0.55rem;
+        border-radius: 50%;
+        background: var(--gold);
+        box-shadow: 0 0 1rem rgba(243, 203, 106, 0.55);
+        content: "";
+      }
+
+      h1,
+      h2 {
+        letter-spacing: -0.035em;
+        line-height: 1.12;
+      }
+
+      h1 {
+        max-width: 12ch;
+        margin: 0;
+        font-size: clamp(2.7rem, 9vw, 5.7rem);
+      }
+
+      h2 {
+        margin: 0 0 1rem;
+        font-size: clamp(1.45rem, 4vw, 2rem);
+      }
+
+      p,
+      ul {
+        margin: 0 0 1.15rem;
+      }
+
+      .intro {
+        max-width: 62ch;
+        margin-top: 1.5rem;
+        color: var(--muted);
+        font-size: clamp(1.08rem, 2.5vw, 1.28rem);
+      }
+
+      .updated {
+        display: inline-block;
+        margin-top: 1.25rem;
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        background: rgba(13, 29, 22, 0.7);
+        color: var(--muted);
+        padding: 0.45rem 0.8rem;
+        font-size: 0.82rem;
+      }
+
+      .summary {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1px;
+        overflow: hidden;
+        margin: 1rem 0 3.5rem;
+        border: 1px solid var(--line);
+        border-radius: 1.25rem;
+        background: var(--line);
+      }
+
+      .summary div {
+        min-height: 8rem;
+        background: rgba(13, 29, 22, 0.92);
+        padding: 1.25rem;
+      }
+
+      .summary strong {
+        display: block;
+        margin-bottom: 0.45rem;
+        color: var(--leaf);
+        font-size: 1.05rem;
+      }
+
+      .summary span {
+        color: var(--muted);
+        font-size: 0.9rem;
+        line-height: 1.45;
+      }
+
+      section {
+        scroll-margin-top: 1.5rem;
+        border-top: 1px solid var(--line);
+        padding: 2.5rem 0;
+      }
+
+      li + li {
+        margin-top: 0.45rem;
+      }
+
+      .contact {
+        margin-top: 1rem;
+        border: 1px solid rgba(142, 232, 167, 0.22);
+        border-radius: 1rem;
+        background: linear-gradient(135deg, rgba(24, 54, 38, 0.82), rgba(13, 29, 22, 0.9));
+        padding: 1.2rem;
+      }
+
+      footer {
+        padding: 1rem 0 3rem;
+        color: var(--muted);
+        font-size: 0.84rem;
+      }
+
+      @media (max-width: 650px) {
+        .summary {
+          grid-template-columns: 1fr;
+        }
+
+        .summary div {
+          min-height: 0;
+        }
+      }
+
+      @media print {
+        :root {
+          color-scheme: light;
+        }
+
+        body {
+          background: #fff;
+          color: #142019;
+          font-size: 11pt;
+        }
+
+        .summary div,
+        .contact {
+          background: #fff;
+        }
+
+        a {
+          color: #1d5c31;
+        }
+      }
+    </style></head><body>
+<a class="skip-link" href="#conteudo">Ir para o conteúdo</a><header><p class="eyebrow">Notchling · Suporte</p><h1>Como podemos ajudar?</h1><p class="intro">Dúvidas sobre Pip, sua jornada ou sua conta? Fale com a gente.</p><p class="contact"><a href="mailto:gilberto.sirq@gmail.com?subject=Suporte%20Notchling">gilberto.sirq@gmail.com</a></p></header>
+<main id="conteudo">
+<section aria-labelledby="pedido"><h2 id="pedido">Antes de enviar</h2><p>Conte o que aconteceu, o que esperava e quando ocorreu. Se souber, inclua o modelo do iPhone, a versão do iOS e do Notchling. Capturas da tela podem ajudar, desde que você oculte dados pessoais.</p><p>Nunca envie senha, código de verificação da Apple, token de autenticação, recibo de exclusão ou chave de recuperação. Não precisamos desses dados para ajudar.</p></section>
+<section aria-labelledby="jornada"><h2 id="jornada">Minha jornada não atualizou</h2><p>Abra o app com conexão para sincronizar sua jornada. A Tela Bloqueada e a Dynamic Island dependem das permissões e da atualização do sistema. O app permite acompanhar e concluir a jornada quando a superfície não estiver disponível.</p><p>Perder um encontro ou ficar sem conexão não reduz a recompensa-base da expedição. Escolhas podem acrescentar bônus. Se o resultado parecer incorreto, fale com o suporte antes de apagar o app.</p></section>
+<section aria-labelledby="conta"><h2 id="conta">Proteger ou recuperar o progresso</h2><p>Você começa como visitante. Em Ajuda e configurações, a proteção com Apple é opcional quando o serviço estiver disponível. Para restaurar, use a mesma identidade Apple vinculada anteriormente.</p><p>Um progresso de visitante sem vínculo pode não ser recuperável após perda do aparelho ou do acesso local. Desinstalar o app não exclui a conta hospedada. Antes de trocar de aparelho, conclua a proteção do progresso e confirme que a conta aparece como protegida.</p></section>
+<section aria-labelledby="exclusao"><h2 id="exclusao">Excluir conta e progresso</h2><p>No app, abra Ajuda e configurações e escolha “Excluir minha conta e progresso”. Leia as confirmações: a remoção é permanente. Contas protegidas podem exigir nova confirmação com Apple.</p><p>Se a resposta se perder, use “Verificar exclusão”. Se o resultado não puder ser confirmado, tente novamente ou fale com o suporte. Esquecer a referência local não comprova exclusão no servidor. O app informa separadamente eventuais pendências no provedor de notificações ou na revogação Apple.</p><p>Você também pode solicitar ajuda pelo e-mail acima. Vamos verificar o pedido e localizar a conta com segurança.</p></section>
+<section aria-labelledby="privacidade"><h2 id="privacidade">Privacidade e outros pedidos</h2><p>Para saber quais dados são tratados, por quê e como solicitar acesso ou exclusão, leia a <a href="index.html">Política de Privacidade</a>. O responsável pela distribuição do aplicativo é Igor Veloso.</p></section>
+</main><footer><p>Notchling · <a href="index.html">Privacidade</a> · Brasil · Português</p></footer></body></html>
